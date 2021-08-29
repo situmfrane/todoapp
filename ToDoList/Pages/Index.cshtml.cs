@@ -26,7 +26,7 @@ namespace ToDoList.Pages
             ToDo = await _db.ToDoList.ToListAsync();
         }
 
-        public async Task<IActionResult> OnPostDelete(int id)
+        public async Task<IActionResult> OnPost(int id)
         {
             
             var task = await _db.ToDoList.FindAsync(id);
